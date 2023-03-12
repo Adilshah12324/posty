@@ -10,7 +10,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name</label>
-                    <input type="text" class="form-control @error('name') border-danger @enderror" name="name" id="exampleInputEmail1" aria-describedby="name" >
+                    <input type="text" class="form-control @error('name') border-danger @enderror" name="name" id="exampleInputEmail1" aria-describedby="name" value="{{old('name')}}" >
                     @error('name')
                     <div class="text-danger mt-2 small">
                         {{$message}}
@@ -18,8 +18,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label @error('username') border-danger @enderror">Username</label>
-                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label ">Username</label>
+                    <input type="text" name="username" class="form-control @error('username') border-danger @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('username')}}">
                     @error('username')
                     <div class="text-danger mt-2 small">
                         {{$message}}
@@ -27,8 +27,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label @error('email') border-danger @enderror">Email</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label ">Email</label>
+                    <input type="email" name="email" class="form-control @error('email') border-danger @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('email')}}">
                     @error('email')
                     <div class="text-danger mt-2 small">
                         {{$message}}
@@ -36,8 +36,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label @error('password') border-danger @enderror">Password</label>
-                    <input type="password" class="form-control" id="password">
+                    <label for="password" class="form-label ">Password</label>
+                    <input type="password" name="password" class="form-control @error('password') border-danger @enderror" id="password">
                     @error('password')
                     <div class="text-danger mt-2 small">
                         {{$message}}
@@ -45,8 +45,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="password_confirmation" class="form-label @error('password_confirmation') border-danger @enderror">Confirm Password</label>
-                    <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
+                    <label for="password_confirmation" class="form-label">Confirm Password</label>
+                    <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') border-danger @enderror" id="password_confirmation" value="{{old('password_confirmation')}}">
                     @error('password_confirmation')
                     <div class="text-danger mt-2 small">
                         {{$message}}
