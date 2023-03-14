@@ -4,7 +4,7 @@
     <div class="container bg-light">
         <div class="row">
 
-            <h2>Register</h2>
+            <h2>Login</h2>
         </div>
         @if(session('status'))
         <div class="bg-danger ">
@@ -31,6 +31,10 @@
                         {{$message}}
                     </div>
                     @enderror
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
                 <button type="submit" class="btn btn-success mb-3">Login</button>
             </form>
