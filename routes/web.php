@@ -32,4 +32,5 @@ Route::get('/register',[RegisterController::class,'index'])->name('register');
 Route::post('/register',[RegisterController::class,'store'])->name('store');
 
 Route::get('/posts',[PostController::class,'index'])->name('post');
+Route::post('/posts',[PostController::class,'store']);
 

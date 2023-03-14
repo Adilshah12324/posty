@@ -38,7 +38,5 @@
                 </div>
                 <button type="submit" class="btn btn-success mb-3">Login</button>
             </form>
-
-
     </div>
 @endsection
